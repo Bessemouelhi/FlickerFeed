@@ -15,6 +15,7 @@ class FlickrImageCollectionViewController: UICollectionViewController {
     let queue1 = DispatchQueue(label: "com.mycompany.app.myqueue.1", qos: .userInitiated)
     let queue2 = DispatchQueue(label: "com.mycompany.app.myqueue.2", qos: .background)
     
+    var api_key: String?
     var flickrPhotos: [Photo] = []
     var urlArray: [String] = []
     var urlArraySmall: [String] = []
@@ -24,7 +25,22 @@ class FlickrImageCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FlickrService.sharedInstance.getPhotos(forTag: tag!, forNumber: number!) {
+        if let path = Bundle.main.path(forResource: "config", ofType: "plist"),
+            let data = NSDictionary(contentsOfFile: path), let dict = data as? Dictionary<String, String> {
+            
+            api_key = dict["api_key"]
+            print("******** api_key ********", api_key! )
+            
+            /*for dict in (data as! [Dictionary<String, String>]) {
+             quotes.append(Quote(author: dict["author"] ?? "unknow", body: dict["body"] ?? "unknow"))
+             }*/
+        }
+        else {
+            print("******** api_key ********", "no api key")
+        }
+
+        
+        FlickrService.sharedInstance.getPhotos(apiKey: api_key!, forTag: tag!, forNumber: number!) {
             (photos: [Photo]) in
             DispatchQueue.main.async {
                 self.flickrPhotos = photos

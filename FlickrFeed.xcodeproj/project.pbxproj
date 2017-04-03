@@ -19,6 +19,7 @@
 		18C091CB1E855DD80068194B /* FlickrImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C091CA1E855DD80068194B /* FlickrImageCollectionViewController.swift */; };
 		18C091CD1E855EE60068194B /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C091CC1E855EE60068194B /* ImageDetailViewController.swift */; };
 		18C3CD7E1E8BB24100DAF38A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3CD7D1E8BB24100DAF38A /* Photo.swift */; };
+		18C771DA1E924A0A00624ED6 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C771D91E924A0A00624ED6 /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		18C091CA1E855DD80068194B /* FlickrImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageCollectionViewController.swift; sourceTree = "<group>"; };
 		18C091CC1E855EE60068194B /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		18C3CD7D1E8BB24100DAF38A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		18C771D91E924A0A00624ED6 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				18A4C8BA1E8D0D510030BA12 /* ImageCache.swift */,
 				18A4C8BC1E8D29120030BA12 /* FlickrService.swift */,
 				18A4C8C01E8D65B90030BA12 /* SearchViewController.swift */,
+				18C771D91E924A0A00624ED6 /* config.plist */,
 			);
 			name = FlickrFeed;
 			path = FlikrFeed;
@@ -145,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C771DA1E924A0A00624ED6 /* config.plist in Resources */,
 				18C091C11E8550DE0068194B /* LaunchScreen.storyboard in Resources */,
 				18C091BE1E8550DE0068194B /* Assets.xcassets in Resources */,
 				18C091BC1E8550DE0068194B /* Main.storyboard in Resources */,

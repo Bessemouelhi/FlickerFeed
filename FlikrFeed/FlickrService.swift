@@ -42,7 +42,7 @@ class FlickrService {
     func connectTo(url : String, callback: @escaping (_ data: Data)-> Void){
      */
     
-    func getPhotos(forTag tag: String, forNumber number: Int, callback: @escaping (_ photos: [Photo]) -> Void) {
+    func getPhotos(apiKey: String, forTag tag: String, forNumber number: Int, callback: @escaping (_ photos: [Photo]) -> Void) {
         
         //let api_key = "79b0d968c81ad7b36523226844a4d110"
         //let auth_token = "72157681966582195-5bfb7b61ef92190f"//\(auth_token)
@@ -51,7 +51,7 @@ class FlickrService {
             search = tag
         }
         
-        let urlString = URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(API_KEY)&tags=\(search)&per_page=\(number)&page=3&format=json&nojsoncallback=1")
+        let urlString = URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&tags=\(search)&per_page=\(number)&page=3&format=json&nojsoncallback=1")
         
         if let url = urlString {
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
